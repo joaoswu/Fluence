@@ -108,7 +108,9 @@ local Library = {
         MainBg = {},
         SidebarBg = {},
         TextLight = {},
-        Muted = {}
+        Muted = {},
+        BoxOff = {},
+        Hover = {}
     }
 }
 
@@ -380,9 +382,9 @@ function Library:CreateWindow(config)
     local AvatarImg = Instance.new("ImageLabel")
     AvatarImg.Size = UDim2.new(0, 24, 0, 24)
     AvatarImg.Position = UDim2.new(0, 14, 0.5, -12)
-    AvatarImg.BackgroundColor3 = Theme.BoxOff
     AvatarImg.BorderSizePixel = 0
     AvatarImg.Parent = UserCard
+    bindTheme(AvatarImg, "BackgroundColor3", "BoxOff")
     addStroke(AvatarImg, "Border")
 
     if localPlayer then
